@@ -55,7 +55,7 @@ public class AsynchronousJiraRestClient implements JiraRestClient {
     private final AuditRestClient auditRestClient;
 
     public AsynchronousJiraRestClient(final URI serverUri, final DisposableHttpClient httpClient) {
-        final URI baseUri = UriBuilder.fromUri(serverUri).path("/rest/api/latest").build();
+        final URI baseUri = UriBuilder.fromUri(serverUri).path("/rest/api/3").build();
 
         this.httpClient = httpClient;
         metadataRestClient = new AsynchronousMetadataRestClient(baseUri, httpClient);
